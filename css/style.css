@@ -57,10 +57,10 @@ textarea {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-.current {
+.nav-list__link--active {
   color: var(--accent-color);
 }
-.current::after {
+.nav-list__link--active::after {
   content: "";
   height: 3px;
   background-color: var(--accent-color);
@@ -243,26 +243,27 @@ textarea {
 .form-field textarea {
   padding-left: 16px;
 }
-/*Main page*/
+/*HEADER*/
 .header {
   background-color: #fff;
   border: 1px solid #ececec;
 }
-.site-nav {
+.nav-list {
   display: flex;
   margin-left: 93px;
 }
-.site-nav .item {
+.nav-list__item {
   position: relative;
+  margin-right: 50px;
 }
-.site-nav .link {
+.nav-list__link {
   padding-top: 32px;
   padding-bottom: 32px;
   display: block;
 }
 
-.site-nav .item + .item {
-  margin-left: 50px;
+.nav-list__item:last-child {
+  margin-right: 0;
 }
 .logo {
   font-family: "Raleway", sans-serif;
@@ -270,7 +271,7 @@ textarea {
   font-size: 26px;
   line-height: 1.4;
 }
-.logo > span {
+.logo__text {
   color: var(--accent-color);
 }
 .header-container {
@@ -282,35 +283,38 @@ textarea {
   display: flex;
   align-items: center;
 }
-.nav-bar .link {
+.nav-list__link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.1;
   letter-spacing: 0.02em;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.nav-bar .link:hover,
-.nav-bar .link:focus {
+.nav-list__link:hover,
+.nav-list__link:focus {
   color: var(--accent-color);
 }
-.contacts {
+.header-contacts {
   display: flex;
   margin-left: auto;
 }
-.contacts .link {
+.header-contacts__link {
   padding-top: 32px;
   padding-bottom: 32px;
   display: flex;
   align-items: center;
 }
-.contacts .item + .item {
-  margin-left: 50px;
+.header-contacts__item {
+  margin-right: 50px;
 }
-.contacts-icon {
+.header-contacts__item:last-child {
+  margin-right: 0;
+}
+.header-contacts__icon {
   margin-right: 10px;
 }
 
-.contacts a {
+.header-contacts__link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.2;
@@ -318,8 +322,8 @@ textarea {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.contacts a:hover,
-.contacts a:focus {
+.header-contacts__link:hover,
+.header-contacts__link:focus {
   color: var(--accent-color);
   fill: var(--accent-color);
 }
@@ -337,7 +341,7 @@ textarea {
   max-width: 1600px;
   margin: 0 auto;
 }
-.main-title {
+.main-screen__title {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.4;
@@ -371,13 +375,13 @@ textarea {
   background-color: #188ce8;
 }
 /*Benefits*/
-.section-benefits {
+.benefits {
   display: flex;
   flex-wrap: wrap;
   margin-left: -30px;
   margin-top: -30px;
 }
-.benefits-svg {
+.benefits__svg {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -385,12 +389,12 @@ textarea {
   padding: 25px 100px;
   margin-bottom: 30px;
 }
-.section-benefits > .benefits-box {
+.benefits__box {
   flex-basis: calc(100% / 4 - 30px);
   margin-left: 30px;
   margin-top: 30px;
 }
-.benefits-title {
+.benefits__title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.1;
@@ -399,7 +403,7 @@ textarea {
   color: var(--text-color);
   margin-bottom: 10px;
 }
-.benefits-descr {
+.benefits__descr {
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
